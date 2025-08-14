@@ -1,0 +1,78 @@
+/* Banner Go vibe */
+.go-banner {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(120deg, #00ADD8, #007B8E);
+    color: #fff;
+}
+
+/* Pattern SVG mờ */
+.go-banner::before {
+    margin-top: 105px;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../images/go-mascot.png");
+    background-repeat: repeat;
+    z-index: 0;
+    opacity: 0.1;
+}
+
+/* Đảm bảo nội dung hiển thị trên pattern */
+.go-banner>.container {
+    position: relative;
+    z-index: 1;
+    margin-top: 125px;
+}
+
+.go-banner .tagline {
+    background: rgba(255, 255, 255, 0.15);
+    border-left: 4px solid #FFDD57;
+}
+
+.go-banner .name-highlight {
+    color: #FFDD57;
+    font-weight: bold;
+}
+
+.go-banner button {
+    background-color: transparent;
+    border: 2px solid #FFDD57;
+    color: #FFDD57;
+    padding: 12px 28px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+}
+
+.go-banner button:hover {
+    background-color: #FFDD57;
+    color: #121212;
+}
+
+/* Floating image */
+.floating-img {
+    animation: updown 3s ease-in-out infinite;
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+@keyframes updown {
+    0% {
+        transform: translateY(-20px);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+.txt-rotate>.wrap {
+    border-right: 0.08rem solid #666;
+}

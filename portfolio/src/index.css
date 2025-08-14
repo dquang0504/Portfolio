@@ -1,0 +1,79 @@
+@font-face {
+    font-family: Centra;
+    src: url('../fonts/CentraNo2-Bold.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Centra;
+    src: url('../fonts/CentraNo2-Book.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Centra;
+    src: url('../fonts/CentraNo2-Medium.ttf');
+    font-weight: 500;
+}
+
+/* CSS RESET */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+select,
+textarea {
+    background-color: transparent;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+    overflow-x: hidden;
+    background-color: #121212 !important;
+    color: #fff;
+    font-family: 'Centra', sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px;
+}
