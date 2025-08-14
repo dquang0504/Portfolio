@@ -1,17 +1,19 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import NavBar from './Components/NavBar'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../src/index.css'
 import Banner from './Components/Banner';
 import Skills from './Components/Skills';
+import About from './Components/About';
+import 'animate.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div>
+    <div >
       <NavBar></NavBar>
       <Banner></Banner>
+      <About></About>
       <Skills></Skills>
     </div>
   )

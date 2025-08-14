@@ -60,6 +60,11 @@ body {
     background-color: #121212 !important;
     color: #fff;
     font-family: 'Centra', sans-serif !important;
+    cursor: url('./assets/images/starter-space-pack.png') 16 16, auto;
+    background: linear-gradient(120deg, #00ADD8, #007B8E);
+    background-attachment: fixed; /* để gradient cố định khi scroll */
+    background-size: cover;
+    color: #fff;
 }
 
 h1,

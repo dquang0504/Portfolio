@@ -1,38 +1,5 @@
 
 /* STYLES CHO NAVBAR */
-nav.navbar {
-    padding: 18px 0;
-    position: fixed;
-    width: 100%;
-    top: 500;
-    z-index: 9999;
-    transition: 0.32 ease-in-out;
-}
-
-nav.navbar.scrolled {
-    padding: 8px 0;
-    background: linear-gradient(90deg, #007B8E, #005f6b);
-}
-
-nav.navbar a.navbar-brand {
-    width: 9%;
-}
-
-nav.navbar .navbar-nav .nav-link.navbar-link {
-    font-weight: 500;
-    color: #ffffff !important;
-    letter-spacing: 0.8px;
-    padding: 0 20px;
-    font-size: 17px;
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
-nav.navbar .navbar-nav a.nav-link.navbar-link:active {
-    color: #FFDD57 !important;
-}
-
 span.navbar-text {
     display: flex;
     align-items: center;
@@ -115,6 +82,16 @@ nav.navbar .navbar-nav .nav-link.navbar-link::after {
     transform: scaleX(0);
     transition: transform 0.3s ease;
     transform-origin: left;
+}
+
+.active-navbar-link{
+    color: #FFDD57 !important;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    padding: 0 20px;
+    font-size: 17px;
+    position: relative;
+    transition: color 0.3s ease;
 }
 
 nav.navbar .navbar-nav .nav-link.navbar-link:hover::after {
