@@ -13,21 +13,10 @@
 
 /* Grid layout */
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 30px;
-}
-
-.skill-card {
-    display: flex;
-    flex-direction: column; /* icon trên, tên dưới */
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 25px 15px;
-    transition: all 0.3s ease;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
 }
 
 .skill-icon {
@@ -44,8 +33,90 @@
 }
 
 /* Hover effect */
-.skill-card:hover {
-    border-color: #FFDD57;
-    transform: translateY(-5px);
+.skill-card {
+  position: relative;        /* thêm cái này để pseudo-element hiển thị */
+  width: 160px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  overflow: hidden;
+  z-index: 1;
 }
 
+.skill-card:hover {
+  transform: translateY(-5px);   /* bỏ border-color đi */
+}
+
+/* Neon border bằng pseudo-element */
+.neon-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 2px;
+  background: linear-gradient(
+    90deg,
+    #ffdd57,
+    #ff0088,
+    #0d63f8,
+    #8df0cc,
+    #ffdd57
+  );
+  background-size: 300% 300%;
+  animation: borderFlow 6s linear infinite;
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+@keyframes borderFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+/* Tabs */
+.skills-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0 40px 0;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  color: #ccc;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+  color: #fff;
+  background: rgba(255, 221, 87, 0.15);
+}
+
+.tab-btn.active {
+  background: #1a1a1a;
+  color: #ffdd57;
+  box-shadow: 0 0 8px rgba(255, 221, 87, 0.5);
+}

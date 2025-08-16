@@ -6,6 +6,7 @@ import HeaderImg from '../assets/images/header-img.png';
 import '../assets/css/banner.css';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
@@ -92,8 +93,40 @@ func main() {
                             }
                         </TrackVisibility>
                     </Col>
-                    <Col xs={12} md={6} xl={5}>
+                    <Col xs={12} md={6} xl={5} className='text-center'>
                         <img src={HeaderImg} alt="Header Img" className="floating-img" />
+
+                        {/* Job title */}
+                        <h3 className='job-title'>Fullstack Developer</h3>
+                        <p className="job-subtitle">Go • Web Development • Scalable Systems</p>
+
+                        {/* Action Buttons */}
+                        <div className="mt-3 d-flex justify-content-center gap-3 flex-wrap">
+                            <a
+                                href="/cv.pdf" // link tới file CV của bạn
+                                download
+                                className="btn-custom"
+                            >
+                                📄 Download CV
+                            </a>
+                            <a
+                                href="#contact" // link tới section liên hệ
+                                className="btn-custom secondary"
+                            >
+                                <DotLottieReact
+                                    src="https://lottie.host/e68b5504-1198-4a9e-aec9-75a3f43e082d/JUXE4RerqT.lottie"
+                                    loop
+                                    autoplay
+                                    style={{
+                                        width: "24px",
+                                        height: "24px",
+                                        display: "inline-block",
+                                        verticalAlign: "middle",
+                                        marginRight: "6px"
+                                    }}
+                                /> Contact Me
+                            </a>
+                        </div>
                     </Col>
                 </Row>
             </Container>

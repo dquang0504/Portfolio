@@ -3,7 +3,7 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 import NavIcon1 from '../assets/images/nav-icon1.svg'
 import NavIcon2 from '../assets/images/nav-icon2.svg'
 import NavIcon3 from '../assets/images/nav-icon3.svg'
-import '../assets/css/portfolio.css';
+import '../assets/css/navbar.css';
 
 const NavBar = () => {
     const [activeLink, setActiveLink] = useState('');
@@ -47,6 +47,7 @@ const NavBar = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
                     <Nav.Link href="#home" className={activeLink === 'home' ? 'active-navbar-link' : 'navbar-link'} onClick={()=>onUpdateActiveLink('home')}>Home</Nav.Link>
+                    <Nav.Link href='#about' className={activeLink === 'about' ? 'active-navbar-link' : 'navbar-link'} onClick={()=>onUpdateActiveLink('about')}>About</Nav.Link>
                     <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active-navbar-link' : 'navbar-link'} onClick={()=>onUpdateActiveLink('skills')}>Skills</Nav.Link>
                     <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active-navbar-link' : 'navbar-link'} onClick={()=>onUpdateActiveLink('projects')}>Projects</Nav.Link>
                 </Nav>

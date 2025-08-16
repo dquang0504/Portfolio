@@ -6,15 +6,19 @@ import Banner from './Components/Banner';
 import Skills from './Components/Skills';
 import About from './Components/About';
 import 'animate.css'
+import { BackgroundBeams } from './components/ui/background-beams';
+import {TracingBeamScrollbar} from './components/ui/tracing-beam'
 
 function App() {
 
   return (
-    <div >
+    <div>
+      <BackgroundBeams className="fixed top-0 left-0 w-full h-full -z-10" />
       <NavBar></NavBar>
       <Banner></Banner>
       <About></About>
       <Skills></Skills>
+      <TracingBeamScrollbar />
     </div>
   )
 }

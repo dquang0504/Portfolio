@@ -3,6 +3,8 @@ import { Container, Row, Col } from 'react-bootstrap';
 import '../assets/css/about.css';
 import { FaBirthdayCake, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import TrackVisibility from 'react-on-screen';
+import Tilt from "react-parallax-tilt";
+import HologramCard from '@/components/ui/hologram-card';
 
 
 const About = () => {
@@ -21,34 +23,53 @@ const About = () => {
 
         {/* Intro */}
         <Row className="align-items-center mb-5">
-          <Col xs={12} md={6}>
-            <h3>Hello! I'm <span className="highlight">Duy Quang</span></h3>
+          <Col xs={6} md={6}>
+            <h3>
+              Hi, I'm <span className="highlight">Đặng Duy Quang</span>
+            </h3>
             <p>
-              I'm a backend engineer specialized in Golang. I love designing RESTful APIs,
-              optimizing database queries, and building scalable systems.
+              I'm a Fullstack Developer based in Can Tho, Viet Nam.
+              I specialize in backend development with <strong>Golang</strong> and API design,
+              and I also work on the front-end side when needed.
+            </p>
+            <p>
+              I build high-performance and scalable web applications, focusing on clean architecture
+              and maintainable code. My skill set includes Go, RESTful API design, SQL optimization, data caching
+              and modern front-end frameworks like React.
+            </p>
+            <p>
+              Whether it's designing robust backend systems or delivering seamless user experiences,
+              I’m passionate about turning complex problems into simple, effective digital solutions.
             </p>
 
+
+
             {/* Personal Info Cards */}
-            <Row className="g-3 mt-4">
-              <Col sm={6}>
+            {/* <Row className="g-3 mt-4">
+              
+            </Row> */}
+          </Col>
+          <Col md={6}>
+            <Row className='g-3'>
+              <Col xs={6}>
                 <div className="info-card">
                   <FaBirthdayCake className="info-icon" />
                   <span>01 Jan 2000</span>
                 </div>
               </Col>
-              <Col sm={6}>
+              <Col xs={6}>
                 <div className="info-card">
                   <FaPhoneAlt className="info-icon" />
                   <span>+84 123 456 789</span>
                 </div>
               </Col>
-              <Col sm={6}>
+              <Col xs={6}>
                 <div className="info-card">
                   <FaEnvelope className="info-icon" />
                   <span>duyquang@example.com</span>
                 </div>
               </Col>
-              <Col sm={6}>
+              <Col xs={6}>
                 <div className="info-card">
                   <FaMapMarkerAlt className="info-icon" />
                   <span>Can Tho, Viet Nam</span>
@@ -63,20 +84,20 @@ const About = () => {
           <Col>
             <h3 className="section-subtitle">Education</h3>
             <div className="timeline">
-              <TrackVisibility once>
+              <TrackVisibility>
                 {({ isVisible }) => (
                   <div className={`timeline-item ${isVisible ? "animate__animated animate__fadeInLeft" : ""}`}>
                     <div className="timeline-dot"></div>
                     <div className="timeline-content">
-                      <h4>FPT University</h4>
-                      <small>2020 - Present</small>
-                      <p>Bachelor of Software Engineering – Specialized in backend development, system design, and cloud deployment.</p>
+                      <h4>FPT Polytechnic College</h4>
+                      <small>2022 - 2024</small>
+                      <p>College Diploma in Software Development – Specialized in backend development, system design, and cloud deployment.</p>
                     </div>
                   </div>
                 )}
               </TrackVisibility>
 
-              <TrackVisibility once>
+              <TrackVisibility>
                 {({ isVisible }) => (
                   <div className={`timeline-item ${isVisible ? "animate__animated animate__fadeInLeft animate__delay-1s" : ""}`}>
                     <div className="timeline-dot"></div>
