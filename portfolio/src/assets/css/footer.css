@@ -1,0 +1,49 @@
+.footer {
+  border-top: 1px solid #333;
+}
+
+.footer-top {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333;
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  color: #FFD700;
+}
+
+.footer-tagline {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+.footer-heading {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: #fff;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #FFD700;
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  color: #bbb;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #FFD700;
+}
+

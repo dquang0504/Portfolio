@@ -14,9 +14,14 @@ import jwt from '../assets/images/skills logo/Jwt-Icon--Streamline-Svg-Logos.svg
 import tensorflow from '../assets/images/skills logo/tensorflow-icon.svg'
 import flask from '../assets/images/skills logo/palletsprojects_flask-icon~v2.svg'
 import huggingface from '../assets/images/skills logo/huggingface-2.svg'
+import java from '../assets/images/skills logo/java-icon.svg'
+import javascript from '../assets/images/skills logo/javascript-icon.svg'
+import python from '../assets/images/skills logo/python-icon.svg'
+import fiber from '../assets/images/skills logo/go-fiber.svg'
+import spring from '../assets/images/skills logo/springio-icon.svg'
+import vite from '../assets/images/skills logo/vitejsdev-icon.svg'
 
 
 
-
-
-export {golang,postgresql,redis,docker,kubernetes,googlecloud,react,typescript,git,html,css,vertexai,jwt,tensorflow,flask,huggingface};
+export {golang,postgresql,redis,docker,kubernetes,googlecloud,react,typescript,git,html
+,css,vertexai,jwt,tensorflow,flask,huggingface,java,javascript,python,fiber,spring,vite};

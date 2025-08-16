@@ -3,8 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import '../assets/css/about.css';
 import { FaBirthdayCake, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import TrackVisibility from 'react-on-screen';
-import Tilt from "react-parallax-tilt";
-import HologramCard from '@/components/ui/hologram-card';
+import { motion } from "motion/react";
 
 
 const About = () => {
@@ -87,7 +86,16 @@ const About = () => {
               <TrackVisibility>
                 {({ isVisible }) => (
                   <div className={`timeline-item ${isVisible ? "animate__animated animate__fadeInLeft" : ""}`}>
-                    <div className="timeline-dot"></div>
+                    <motion.div 
+                      className="timeline-dot"
+                      animate={{scale: [1, 1.3, 1]}}
+                      transition={{
+                        duration: 1,
+                        repeat: Infinity,
+                        repeatType: "loop",
+                        ease: "easeInOut"
+                      }}
+                    ></motion.div>
                     <div className="timeline-content">
                       <h4>FPT Polytechnic College</h4>
                       <small>2022 - 2024</small>
@@ -100,7 +108,16 @@ const About = () => {
               <TrackVisibility>
                 {({ isVisible }) => (
                   <div className={`timeline-item ${isVisible ? "animate__animated animate__fadeInLeft animate__delay-1s" : ""}`}>
-                    <div className="timeline-dot"></div>
+                    <motion.div 
+                      className="timeline-dot"
+                      animate={{scale: [1, 1.3, 1]}}
+                      transition={{
+                        duration: 1,
+                        repeat: Infinity,
+                        repeatType: "loop",
+                        ease: "easeInOut"
+                      }}
+                    ></motion.div>
                     <div className="timeline-content">
                       <h4>Self-learning & Certifications</h4>
                       <small>Ongoing</small>

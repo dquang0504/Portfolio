@@ -5,20 +5,26 @@ import { motion } from "motion/react";
 import {
   css,
   docker,
+  fiber,
   flask,
   git,
   golang,
   googlecloud,
   html,
   huggingface,
+  java,
+  javascript,
   jwt,
   kubernetes,
   postgresql,
+  python,
   react,
   redis,
+  spring,
   tensorflow,
   typescript,
   vertexai,
+  vite,
 } from "../Services/imports";
 import "../assets/css/skills.css";
 
@@ -29,6 +35,9 @@ const Skills = () => {
   > = {
     Languages: [
       { icon: golang, name: "Golang" },
+      {icon: java, name: "Java"},
+      {icon: python, name: "Python"},
+      {icon: javascript, name: "Javascript"},
       { icon: html, name: "HTML5" },
       { icon: css, name: "CSS" },
       { icon: typescript, name: "TypeScript" },
@@ -36,6 +45,9 @@ const Skills = () => {
     "Frameworks/Libraries": [
       { icon: react, name: "React" },
       { icon: flask, name: "Flask" },
+      { icon: fiber, name: "Fiber" },
+      { icon: spring, name: "Spring Boot"},
+      { icon: vite, name: "Vite" },
     ],
     "ML/Data": [
       { icon: tensorflow, name: "Tensorflow" },

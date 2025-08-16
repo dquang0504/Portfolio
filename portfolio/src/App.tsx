@@ -6,18 +6,24 @@ import Banner from './Components/Banner';
 import Skills from './Components/Skills';
 import About from './Components/About';
 import 'animate.css'
-import { BackgroundBeams } from './components/ui/background-beams';
 import {TracingBeamScrollbar} from './components/ui/tracing-beam'
+import Projects from './Components/Projects';
+import Contact from './Components/Contact';
+import Footer from './Components/Footer';
+import StarsBackground from './components/ui/background-stars';
 
 function App() {
 
   return (
     <div>
-      <BackgroundBeams className="fixed top-0 left-0 w-full h-full -z-10" />
+      <StarsBackground className="w-full h-full" />
       <NavBar></NavBar>
       <Banner></Banner>
+      <Projects></Projects>
       <About></About>
       <Skills></Skills>
+      <Contact></Contact>
+      <Footer></Footer>
       <TracingBeamScrollbar />
     </div>
   )
