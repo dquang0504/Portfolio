@@ -126,6 +126,7 @@ export const RocketCursor = () => {
     <canvas
       ref={canvasRef}
       className="fixed top-0 left-0 w-full h-full z-50 pointer-events-none"
+      style={{zIndex:10000}}
     />
   );
 };

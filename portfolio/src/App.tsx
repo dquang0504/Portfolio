@@ -12,6 +12,7 @@ import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 import { BackgroundStars } from './components/ui/background-stars';
 import { RocketCursor } from './components/ui/rocket-cursor';
+import BackToTop from './Components/BackToTop';
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
       <TracingBeamScrollbar />
       <BackgroundStars />
       <RocketCursor></RocketCursor>
+      <BackToTop></BackToTop>
     </div>
   )
 }

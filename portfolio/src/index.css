@@ -41,11 +41,13 @@ button {
 }
 
 html {
-  scrollbar-width: none; /* Firefox */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
 html::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+    display: none;
+    /* Chrome, Safari */
 }
 
 body {
@@ -57,7 +59,8 @@ body {
     background-color: #121212 !important;
     color: #fff;
     font-family: 'Montserrat', sans-serif !important;
-    background-attachment: fixed; /* để gradient cố định khi scroll */
+    background-attachment: fixed;
+    /* để gradient cố định khi scroll */
     background-size: cover;
     color: #fff;
 }
@@ -186,11 +189,12 @@ html {
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+    * {
+        @apply border-border outline-ring/50;
     }
-  body {
-    @apply bg-background text-foreground;
+
+    body {
+        @apply bg-background text-foreground;
     }
 }
 
@@ -205,4 +209,9 @@ html {
     text-align: center;
     color: #d4d4d4;
     margin-bottom: 40px;
+}
+
+.arrow {
+    background: linear-gradient(135deg, #FFDD57, #FF9900);
+    border-radius: 50%;
 }
