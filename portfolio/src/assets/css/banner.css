@@ -3,7 +3,7 @@
     position: relative;
     overflow: hidden;
     color: #fff;
-    min-height: 100vh; /* chiếm hết màn hình */
+    min-height: 80vh; /* chiếm hết màn hình */
     padding: 60px 0;   /* khoảng cách trên dưới */
 }
 

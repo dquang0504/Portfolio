@@ -72,6 +72,7 @@ const Projects = () => {
                                         href={project.github}
                                         target="_blank"
                                         className="d-flex justify-content-center align-items-center"
+                                        style={{cursor: 'none'}}
                                     >
                                         <FaGithub className="me-2" /> Code
                                     </Button>
@@ -83,6 +84,7 @@ const Projects = () => {
                                         href={project.demo}
                                         target="_blank"
                                         className="d-flex justify-content-center align-items-center"
+                                        style={{cursor: 'none'}}
                                     >
                                         <FaExternalLinkAlt className="me-1" /> Live
                                     </Button>

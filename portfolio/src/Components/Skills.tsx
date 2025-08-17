@@ -98,6 +98,7 @@ const Skills = () => {
               key={cat}
               className={`tab-btn ${activeTab === cat ? "active" : ""}`}
               onClick={() => setActiveTab(cat as keyof typeof categories)}
+              style={{cursor: 'none'}}
             >
               {cat}
             </button>

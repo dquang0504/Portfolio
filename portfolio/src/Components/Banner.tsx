@@ -82,7 +82,7 @@ func main() {
                                     </SyntaxHighlighter>
 
                                     <button                               
-                                        style={{ marginTop: '20px' }}
+                                        style={{ marginTop: '20px' ,cursor: 'none'}}
                                         onClick={() => console.log('connect')}
                                     >
                                         <span className='d-flex justify-content-center'>

@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import NavBar from './Components/NavBar'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../src/index.css'
@@ -10,13 +10,13 @@ import {TracingBeamScrollbar} from './components/ui/tracing-beam'
 import Projects from './Components/Projects';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
-import StarsBackground from './components/ui/background-stars';
+import { BackgroundStars } from './components/ui/background-stars';
+import { RocketCursor } from './components/ui/rocket-cursor';
 
 function App() {
 
   return (
     <div>
-      <StarsBackground className="w-full h-full" />
       <NavBar></NavBar>
       <Banner></Banner>
       <Projects></Projects>
@@ -25,6 +25,8 @@ function App() {
       <Contact></Contact>
       <Footer></Footer>
       <TracingBeamScrollbar />
+      <BackgroundStars />
+      <RocketCursor></RocketCursor>
     </div>
   )
 }

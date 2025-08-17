@@ -47,15 +47,16 @@ const NavBar = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
                     <Nav.Link href="#home" className={activeLink === 'home' ? 'active-navbar-link' : 'navbar-link'} onClick={()=>onUpdateActiveLink('home')}>Home</Nav.Link>
+                    <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active-navbar-link' : 'navbar-link'} onClick={()=>onUpdateActiveLink('projects')}>Projects</Nav.Link>
                     <Nav.Link href='#about' className={activeLink === 'about' ? 'active-navbar-link' : 'navbar-link'} onClick={()=>onUpdateActiveLink('about')}>About</Nav.Link>
                     <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active-navbar-link' : 'navbar-link'} onClick={()=>onUpdateActiveLink('skills')}>Skills</Nav.Link>
-                    <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active-navbar-link' : 'navbar-link'} onClick={()=>onUpdateActiveLink('projects')}>Projects</Nav.Link>
+                    <Nav.Link href="#contact" className={activeLink === 'contact' ? 'active-navbar-link' : 'navbar-link'} onClick={()=>onUpdateActiveLink('contact')}>Contact</Nav.Link>
                 </Nav>
                 <span className='navbar-text'>
                     <div className='social-icon'>
-                        <a href="#"><img src={NavIcon1} alt="fb" /></a>
-                        <a href="#"><img src={NavIcon2} alt="tw" /></a>
-                        <a href="#"><img src={NavIcon3} alt="yt" /></a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/duy-quang-dang-8a668b294/"><img src={NavIcon1} alt="li" /></a>
+                        <a target="_blank" rel="noopener noreferrer" href="#"><img src={NavIcon2} alt="tw" /></a>
+                        <a target="_blank" rel="noopener noreferrer" href="#"><img src={NavIcon3} alt="yt" /></a>
                     </div>
                     <button className='vvd' onClick={()=>console.log("connect")}>
                         <span>Let's Connect</span>
