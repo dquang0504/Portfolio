@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { FaPaperPlane } from "react-icons/fa";
@@ -7,6 +7,32 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import '../assets/css/contact.css'
 
 const Contact = () => {
+
+    const [form,setForm] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+
+    const handleSubmit = async()=>{
+        try {
+            const res = await fetch("/api/contact",{
+                method: 'POST',
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify(form),
+            });
+            const data = await res.json();
+            if (res.ok){
+                alert("✅ Email sent successfully!");
+                setForm({name: '',email: '',message: ''})
+            }else{
+                alert("❌ Failed: " + data.error);
+            }
+        } catch (error) {
+            console.log("❌ Something went wrong: ",error);
+        }
+    }
+
     return (
         <section id="contact" className="py-5">
             <Container>
@@ -47,10 +73,12 @@ const Contact = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}
                         >
-                            <Form>
+                            <Form onSubmit={(e)=>{e.preventDefault();handleSubmit()}}>
                                 <Form.Group className="mb-3" controlId="formName">
                                     <Form.Label className="text-white">Your Name</Form.Label>
                                     <Form.Control
+                                        required
+                                        onChange={(e)=>setForm({...form,name: e.target.value})}
                                         type="text"
                                         placeholder="What should I call you ?"
                                         className="bg-transparent text-white border-secondary custom-input"
@@ -60,6 +88,8 @@ const Contact = () => {
                                 <Form.Group className="mb-3" controlId="formEmail">
                                     <Form.Label className="text-white">Email</Form.Label>
                                     <Form.Control
+                                        required
+                                        onChange={(e)=>setForm({...form,email: e.target.value})}
                                         type="email"
                                         placeholder="No spam, I promise (maybe 😏)"
                                         className="bg-transparent text-white border-secondary custom-input"
@@ -69,6 +99,8 @@ const Contact = () => {
                                 <Form.Group className="mb-3" controlId="formMessage">
                                     <Form.Label className="text-white">Message</Form.Label>
                                     <Form.Control
+                                        required
+                                        onChange={(e)=>setForm({...form,message: e.target.value})}
                                         as="textarea"
                                         rows={4}
                                         placeholder="Tell me what’s on your mind 💡"

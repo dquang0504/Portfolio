@@ -53,19 +53,19 @@ const About = () => {
               <Col xs={6}>
                 <div className="info-card">
                   <FaBirthdayCake className="info-icon" />
-                  <span>01 Jan 2000</span>
+                  <span>04 May 2004</span>
                 </div>
               </Col>
               <Col xs={6}>
                 <div className="info-card">
                   <FaPhoneAlt className="info-icon" />
-                  <span>+84 123 456 789</span>
+                  <span>+84 79 960 7411</span>
                 </div>
               </Col>
               <Col xs={6}>
                 <div className="info-card">
                   <FaEnvelope className="info-icon" />
-                  <span>duyquang@example.com</span>
+                  <span>williamdang0404@gmail.com</span>
                 </div>
               </Col>
               <Col xs={6}>
