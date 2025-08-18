@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import "../assets/css/projects.css";

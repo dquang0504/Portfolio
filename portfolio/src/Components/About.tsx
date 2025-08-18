@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import '../assets/css/about.css';
 import { FaBirthdayCake, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';

@@ -1,4 +1,3 @@
-import React, { useEffect, useRef, useState } from 'react'
 import NavBar from './Components/NavBar'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../src/index.css'

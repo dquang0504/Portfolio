@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
-import { AnimatePresence, motion, scale } from 'framer-motion'
+import { AnimatePresence, motion} from 'framer-motion'
 
 const BackToTop = () => {
     const [atTop, setAtTop] = useState(true);

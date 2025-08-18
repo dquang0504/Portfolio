@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { FaPaperPlane } from "react-icons/fa";
@@ -22,7 +22,6 @@ const Contact = () => {
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(form),
             });
-            const data = await res.json();
             if (res.ok){
                 SpaceToast.success("Message sent to the galaxy!")
                 setForm({name: '',email: '',message: ''})
