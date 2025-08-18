@@ -48,11 +48,18 @@ export const RocketCursor = () => {
       });
     };
 
+    //for computer-like devices
     const handleMouseMove = (e: MouseEvent) => {
       cursor.x = e.clientX;
       cursor.y = e.clientY;
     };
+
+    const handleTouchMove = (e:TouchEvent)=>{
+      cursor.x = e.touches[0].clientX;
+      cursor.y = e.touches[0].clientY
+    }
     window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("touchmove", handleTouchMove);
 
     // 🎥 Animate
     const animate = () => {
@@ -119,6 +126,8 @@ export const RocketCursor = () => {
 
     return () => {
       window.removeEventListener("resize", handleResize);
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("touchmove", handleTouchMove);
     };
   }, []);
 
