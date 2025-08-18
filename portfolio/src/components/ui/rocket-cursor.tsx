@@ -1,11 +1,21 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import rocket from "../../assets/images/rocket-svgrepo-com.svg";
 
 export const RocketCursor = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(()=>{
+    //detect mobile devices
+    const checkMobile = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      ) || window.innerWidth < 768;
+    setIsMobile(checkMobile)
+  },[])
 
   useEffect(() => {
+    if(isMobile) return;
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
@@ -54,12 +64,7 @@ export const RocketCursor = () => {
       cursor.y = e.clientY;
     };
 
-    const handleTouchMove = (e:TouchEvent)=>{
-      cursor.x = e.touches[0].clientX;
-      cursor.y = e.touches[0].clientY
-    }
     window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("touchmove", handleTouchMove);
 
     // 🎥 Animate
     const animate = () => {
@@ -127,9 +132,10 @@ export const RocketCursor = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
       window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("touchmove", handleTouchMove);
     };
-  }, []);
+  }, [isMobile]);
+
+  if (isMobile) return null;
 
   return (
     <canvas
