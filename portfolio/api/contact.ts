@@ -4,7 +4,7 @@ import mailer from 'nodemailer'
 const user = process.env.VITE_GMAIL_USERNAME;
 const pass = process.env.VITE_GMAIL_PASS;
 
-export const handler = async (req: VercelRequest, res: VercelResponse) => {
+export default async function handler(req: VercelRequest, res: VercelResponse){
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method not allowed' });
     }

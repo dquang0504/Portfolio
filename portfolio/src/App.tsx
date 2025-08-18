@@ -13,6 +13,7 @@ import Footer from './Components/Footer';
 import { BackgroundStars } from './components/ui/background-stars';
 import { RocketCursor } from './components/ui/rocket-cursor';
 import BackToTop from './Components/BackToTop';
+import { SpaceToastProvider } from './components/ui/space-toast';
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
       <BackgroundStars />
       <RocketCursor></RocketCursor>
       <BackToTop></BackToTop>
+      <SpaceToastProvider></SpaceToastProvider>
     </div>
   )
 }

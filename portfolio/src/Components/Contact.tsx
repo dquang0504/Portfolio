@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { FaPaperPlane } from "react-icons/fa";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import '../assets/css/contact.css'
+import { SpaceToast } from "@/components/ui/space-toast";
 
 const Contact = () => {
 
@@ -23,10 +24,10 @@ const Contact = () => {
             });
             const data = await res.json();
             if (res.ok){
-                alert("✅ Email sent successfully!");
+                SpaceToast.success("Message sent to the galaxy!")
                 setForm({name: '',email: '',message: ''})
             }else{
-                alert("❌ Failed: " + data.error);
+                SpaceToast.error("Signal lost in space!")
             }
         } catch (error) {
             console.log("❌ Something went wrong: ",error);
@@ -77,6 +78,7 @@ const Contact = () => {
                                 <Form.Group className="mb-3" controlId="formName">
                                     <Form.Label className="text-white">Your Name</Form.Label>
                                     <Form.Control
+                                        value={form.name}
                                         required
                                         onChange={(e)=>setForm({...form,name: e.target.value})}
                                         type="text"
@@ -88,6 +90,7 @@ const Contact = () => {
                                 <Form.Group className="mb-3" controlId="formEmail">
                                     <Form.Label className="text-white">Email</Form.Label>
                                     <Form.Control
+                                        value={form.email}
                                         required
                                         onChange={(e)=>setForm({...form,email: e.target.value})}
                                         type="email"
@@ -99,6 +102,7 @@ const Contact = () => {
                                 <Form.Group className="mb-3" controlId="formMessage">
                                     <Form.Label className="text-white">Message</Form.Label>
                                     <Form.Control
+                                        value={form.message}
                                         required
                                         onChange={(e)=>setForm({...form,message: e.target.value})}
                                         as="textarea"
