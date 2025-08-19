@@ -21,7 +21,7 @@ const About = () => {
 
         {/* Intro */}
         <Row className="align-items-center mb-5">
-          <Col xs={6} md={6}>
+          <Col xs={12} md={6} sm={12}>
             <h3>
               Hi, I'm <span className="highlight">Đặng Duy Quang</span>
             </h3>
@@ -47,27 +47,27 @@ const About = () => {
               
             </Row> */}
           </Col>
-          <Col md={6}>
+          <Col md={6} sm={12} xs={12}>
             <Row className='g-3'>
-              <Col xs={6}>
+              <Col xs={12} md={12}>
                 <div className="info-card">
                   <FaBirthdayCake className="info-icon" />
                   <span>04 May 2004</span>
                 </div>
               </Col>
-              <Col xs={6}>
+              <Col xs={12} md={12}>
                 <div className="info-card">
                   <FaPhoneAlt className="info-icon" />
                   <span>+84 79 960 7411</span>
                 </div>
               </Col>
-              <Col xs={6}>
+              <Col xs={12} md={12}>
                 <div className="info-card">
                   <FaEnvelope className="info-icon" />
                   <span>williamdang0404@gmail.com</span>
                 </div>
               </Col>
-              <Col xs={6}>
+              <Col xs={12} md={12}>
                 <div className="info-card">
                   <FaMapMarkerAlt className="info-icon" />
                   <span>Can Tho, Viet Nam</span>

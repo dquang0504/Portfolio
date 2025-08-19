@@ -36,7 +36,7 @@ nav.navbar.scrolled {
   display: block;
   width: 28px;
   height: 2px;
-  background-color: #fff;
+  background-color: #FFDD57;
   border-radius: 2px;
   transition: all 0.3s ease-in-out;
 }
@@ -48,7 +48,7 @@ nav.navbar.scrolled {
   left: 0;
   width: 28px;
   height: 2px;
-  background-color: #fff;
+  color: #fff;
   border-radius: 2px;
   transition: all 0.3s ease-in-out;
 }
@@ -58,21 +58,6 @@ nav.navbar.scrolled {
 }
 .navbar-toggler-icon::after {
   top: 8px;
-}
-
-/* Khi mở menu => biến thành X */
-.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
-  background-color: transparent;
-}
-.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
-  transform: rotate(45deg);
-  top: 0;
-  background-color: #FFDD57;
-}
-.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
-  transform: rotate(-45deg);
-  top: 0;
-  background-color: #FFDD57;
 }
 
 /* Nav links */
@@ -213,3 +198,5 @@ span.navbar-text {
     width: 100%;
   }
 }
+
+
