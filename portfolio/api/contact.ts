@@ -1,8 +1,8 @@
-import { VercelRequest, VercelResponse } from '@vercel/node'
+import type { VercelRequest, VercelResponse } from '@vercel/node'
 import mailer from 'nodemailer'
 
-const user = process.env.VITE_GMAIL_USERNAME;
-const pass = process.env.VITE_GMAIL_PASS;
+const user = process.env.GMAIL_USERNAME;
+const pass = process.env.GMAIL_PASS;
 
 export default async function handler(req: VercelRequest, res: VercelResponse){
     if (req.method !== 'POST') {
