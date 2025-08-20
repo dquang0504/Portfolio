@@ -55,7 +55,7 @@ const BackToTop = () => {
 
    return (
   <motion.div
-    className="fixed p-2 bottom-10 end-5 md:bottom-10 md:end-8" 
+    className="fixed p-2 bottom-14 end-3 md:bottom-10 md:end-8" 
     transition={{ duration: 3 }}
     whileHover={{ scale: 1.4, rotate: 10 }}
     whileTap={{ scale: 0.9 }}
