@@ -53,8 +53,8 @@ const projects = [
         image:
             portfolio,
         tech: ["React", "TypeScript", "Framer Motion", "Node.js", "Vercel", "Aceternity UI"],
-        github: "https://github.com/yourusername/portfolio",
-        demo: "https://your-portfolio.com",
+        github: "https://github.com/dquang0504/Portfolio",
+        demo: "https://portfolio-showcase-william.vercel.app/",
     },
     // {
     //     title: "AI Chatbot",
