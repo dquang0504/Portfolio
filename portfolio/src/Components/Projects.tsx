@@ -3,8 +3,6 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import VideoCarousel from '../components/ui/video-carousel'
 import "../assets/css/projects.css";
-import orderingDemo from '../assets/demo vids/ordering demo.mp4'
-import managingDemo from '../assets/demo vids/managing demo.mp4'
 
 
 const projects = [
@@ -12,7 +10,7 @@ const projects = [
         title: "E-commerce Website for Food ordering and Delivery",
         description:
             "Developed a full-featured e-commerce website with order, payment, review, and admin management.\nIntegrated Vertex AI chatbot for smart ordering (voice-based natural language order creation), and intelligent product search via voice & image recognition (TensorFlow).\nSupported multiple payment methods (COD, VNPAY, PayPal).\nImplemented AI-powered review filtering (toxic/NSFW detection) and sentiment analysis (positive, negative, neutral, mixed) for actionable insights in admin dashboard.",
-        video: [orderingDemo,managingDemo],
+        video: ["https://c5untoriejse3yvf.public.blob.vercel-storage.com/ordering%20demo.mp4","https://c5untoriejse3yvf.public.blob.vercel-storage.com/managing%20demo.mp4"],
         tech: ["React", "Typescript", "Golang", "PostgreSQL", "Docker", "Python", "Tensorflow", "Hugging face", "Natural Language Processing"],
         github: "",
         demo: "https://github.com/yourusername/ecommerce",
