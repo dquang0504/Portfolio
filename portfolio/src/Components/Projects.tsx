@@ -3,7 +3,6 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import VideoCarousel from '../components/ui/video-carousel'
 import "../assets/css/projects.css";
-import goodfood from '../assets/images/project imgs/goodfood-demo.png'
 import orderingDemo from '../assets/demo vids/ordering demo.mp4'
 import managingDemo from '../assets/demo vids/managing demo.mp4'
 
