@@ -1,9 +1,33 @@
 "use client";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import VideoCarousel from '../components/ui/video-carousel'
 import "../assets/css/projects.css";
+import goodfood from '../assets/images/project imgs/goodfood-demo.png'
+import orderingDemo from '../assets/demo vids/ordering demo.mp4'
+import managingDemo from '../assets/demo vids/managing demo.mp4'
+
 
 const projects = [
+    {
+        title: "E-commerce Website for Food ordering and Delivery",
+        description:
+            "Developed a full-featured e-commerce website with order, payment, review, and admin management.\nIntegrated Vertex AI chatbot for smart ordering (voice-based natural language order creation), and intelligent product search via voice & image recognition (TensorFlow).\nSupported multiple payment methods (COD, VNPAY, PayPal).\nImplemented AI-powered review filtering (toxic/NSFW detection) and sentiment analysis (positive, negative, neutral, mixed) for actionable insights in admin dashboard.",
+        video: [orderingDemo,managingDemo],
+        tech: ["React", "Typescript", "Golang", "PostgreSQL", "Docker", "Python", "Tensorflow", "Hugging face", "Natural Language Processing"],
+        github: "",
+        demo: "https://github.com/yourusername/ecommerce",
+    },
+    {
+        title: "Front-end for E-commerce Website GoodFood",
+        description:
+            "Chatbot thời gian thực sử dụng Node.js, WebSocket và OpenAI API. Có khả năng trò chuyện, trả lời câu hỏi và hỗ trợ khách hàng tự động.",
+        image:
+            "https://www.elegantthemes.com/blog/wp-content/uploads/2023/09/Docsbot-Homepage-August-2023.jpg",
+        tech: ["Node.js", "OpenAI", "WebSocket"],
+        github: "https://github.com/yourusername/ai-chatbot",
+        demo: "",
+    },
     {
         title: "Portfolio Website",
         description:
@@ -13,15 +37,6 @@ const projects = [
         tech: ["React", "TypeScript", "Framer Motion"],
         github: "https://github.com/yourusername/portfolio",
         demo: "https://your-portfolio.com",
-    },
-    {
-        title: "E-commerce Platform",
-        description:
-            "Một nền tảng thương mại điện tử fullstack với backend Golang và PostgreSQL. Hỗ trợ đăng ký người dùng, giỏ hàng, thanh toán và quản lý đơn hàng.",
-        image: "https://cmsmart.net/images/community/8382/banner.jpg",
-        tech: ["Golang", "PostgreSQL", "Docker"],
-        github: "https://github.com/yourusername/ecommerce",
-        demo: "",
     },
     {
         title: "AI Chatbot",
@@ -45,10 +60,14 @@ const Projects = () => {
                         key={idx}
                         className={`justify-content-center align-items-center mb-5 project-row `}
                     >
-                        {/* Image */}
+                        {/* Image or Videos */}
                         <Col md={10} className="mb-3 mb-md-0">
                             <div className="project-image-container">
-                                <img src={project.image} alt={project.title} />
+                                {project.video ? (
+                                    <VideoCarousel videos={project.video}></VideoCarousel>
+                                    ) : (
+                                    <img src={project.image} alt={project.title} className="w-100 rounded shadow" />
+                                )}
                             </div>
                         </Col>
 
