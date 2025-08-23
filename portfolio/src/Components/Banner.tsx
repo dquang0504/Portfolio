@@ -56,10 +56,9 @@ const Banner = () => {
                             {({ isVisible }) =>
                                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                     <span className='tagline'>
-                                        Welcome to my Go Portfolio
+                                        Welcome to my Portfolio
                                     </span>
 
-                                    {/* Khối code Go */}
                                     <SyntaxHighlighter
                                         language="go"
                                         style={vscDarkPlus}
@@ -103,7 +102,8 @@ func main() {
                         {/* Action Buttons */}
                         <div className="mt-3 d-flex justify-content-center gap-3 flex-wrap">
                             <a
-                                href="/cv.pdf" // link tới file CV của bạn
+                                target="_blank" rel="noopener noreferrer"
+                                href="https://drive.google.com/file/d/1Zzj9RVsfVX3NCmYqZvgBskXjuZyew7X-/view?usp=sharing"
                                 download
                                 className="btn-custom"
                             >

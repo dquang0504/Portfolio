@@ -3,48 +3,69 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import VideoCarousel from '../components/ui/video-carousel'
 import "../assets/css/projects.css";
-
+import feCover from '../assets/images/project imgs/GoodFood-FE-cover.png'
+import beCover from '../assets/images/project imgs/GoodFood-BE-cover.png'
+import aiCover from '../assets/images/project imgs/GoodFood-MS-cover.png'
+import portfolio from '../assets/images/project imgs/portfolio.png'
 
 const projects = [
     {
         title: "E-commerce Website for Food ordering and Delivery",
         description:
             "Developed a full-featured e-commerce website with order, payment, review, and admin management.\nIntegrated Vertex AI chatbot for smart ordering (voice-based natural language order creation), and intelligent product search via voice & image recognition (TensorFlow).\nSupported multiple payment methods (COD, VNPAY, PayPal).\nImplemented AI-powered review filtering (toxic/NSFW detection) and sentiment analysis (positive, negative, neutral, mixed) for actionable insights in admin dashboard.",
-        video: ["https://c5untoriejse3yvf.public.blob.vercel-storage.com/ordering%20demo.mp4","https://c5untoriejse3yvf.public.blob.vercel-storage.com/managing%20demo.mp4"],
+        video: ["https://c5untoriejse3yvf.public.blob.vercel-storage.com/ordering%20demo.mp4", "https://c5untoriejse3yvf.public.blob.vercel-storage.com/managing%20demo.mp4"],
         tech: ["React", "Typescript", "Golang", "PostgreSQL", "Docker", "Python", "Tensorflow", "Hugging face", "Natural Language Processing"],
         github: "",
         demo: "https://github.com/yourusername/ecommerce",
     },
     {
         title: "Front-end for E-commerce Website GoodFood",
-        description:
-            "Chatbot thời gian thực sử dụng Node.js, WebSocket và OpenAI API. Có khả năng trò chuyện, trả lời câu hỏi và hỗ trợ khách hàng tự động.",
-        image:
-            "https://www.elegantthemes.com/blog/wp-content/uploads/2023/09/Docsbot-Homepage-August-2023.jpg",
-        tech: ["Node.js", "OpenAI", "WebSocket"],
-        github: "https://github.com/yourusername/ai-chatbot",
-        demo: "",
+        description: "Developed the front-end for GoodFood, an e-commerce website for online food ordering and delivery. Implemented features such as product browsing, shopping cart, checkout, and order tracking with a responsive and user-friendly UI.",
+        image: feCover,
+        tech: ["React", "TypeScript", "Tailwind CSS", "React Bootstrap", "Framer Motion", "Redux", "SockJS", "Lightbox", "Firebase", "OAuth/Google"],
+        github: "https://github.com/dquang0504/GoodFood-FE",
+        demo: ""
     },
+    {
+        title: "Backend for E-commerce Website GoodFood",
+        description:
+            "Implemented the backend system for GoodFood, handling core business logic, database management, and secure APIs for the e-commerce website. Built with Golang and PostgreSQL to ensure high performance and scalability. \nProvided RESTful APIs for product management, orders, payments, and user authentication (JWT, OAuth with Google/Facebook). \nIntegrated VNPAY and PayPal payment gateways. \nImplemented an image-recognition model powered by TensorFlow to enable intelligent product search from uploaded photos. \nDeployed using Docker for scalability and maintainability.",
+        image: beCover,
+        tech: ["Golang", "PostgreSQL", "Fiber", "Resty", "Docker", "REST API", "JWT", "OAuth", "Websocket", "SQL Boiler", "TensorFlow"],
+        github: "https://github.com/dquang0504/GoodFood-BE",
+        demo: ""
+    },
+
+    {
+        title: "AI Microservice for E-commerce Website GoodFood",
+        description:
+            "Developed a dedicated AI microservice with Python Flask to handle intelligent content analysis for the GoodFood system. \nImplemented toxic speech filtering, sentiment analysis (positive, negative, neutral, mixed), and NSFW content detection using TensorFlow and Hugging Face models. \nDesigned the microservice to be fully decoupled from the main backend, communicating via REST APIs for scalability and modularity. \nPackaged and deployed with Docker for easy integration into the overall system.",
+        image: aiCover,
+        tech: ["Python", "Flask", "TensorFlow", "Hugging Face", "REST API", "Docker", "NLP"],
+        github: "https://github.com/dquang0504/GoodFood-Microservice",
+        demo: ""
+    },
+
     {
         title: "Portfolio Website",
         description:
-            "Personal website built with React, TypeScript and Framer Motion. Đây là nơi giới thiệu bản thân, kỹ năng, và các dự án của tôi với hiệu ứng animation mượt mà.",
+            "A personal portfolio website showcasing my background, skills, and projects. Built with React and TypeScript, enhanced by Framer Motion for smooth animations and an engaging user experience.",
         image:
-            "https://i.ytimg.com/vi/Dtb3DdSvYRY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC_HELxfEWp-yMsKFNTjbbCyF00Mg",
-        tech: ["React", "TypeScript", "Framer Motion"],
+            portfolio,
+        tech: ["React", "TypeScript", "Framer Motion", "Node.js", "Vercel", "Aceternity UI"],
         github: "https://github.com/yourusername/portfolio",
         demo: "https://your-portfolio.com",
     },
-    {
-        title: "AI Chatbot",
-        description:
-            "Chatbot thời gian thực sử dụng Node.js, WebSocket và OpenAI API. Có khả năng trò chuyện, trả lời câu hỏi và hỗ trợ khách hàng tự động.",
-        image:
-            "https://www.elegantthemes.com/blog/wp-content/uploads/2023/09/Docsbot-Homepage-August-2023.jpg",
-        tech: ["Node.js", "OpenAI", "WebSocket"],
-        github: "https://github.com/yourusername/ai-chatbot",
-        demo: "",
-    },
+    // {
+    //     title: "AI Chatbot",
+    //     description:
+    //         "Chatbot thời gian thực sử dụng Node.js, WebSocket và OpenAI API. Có khả năng trò chuyện, trả lời câu hỏi và hỗ trợ khách hàng tự động.",
+    //     image:
+    //         "https://www.elegantthemes.com/blog/wp-content/uploads/2023/09/Docsbot-Homepage-August-2023.jpg",
+    //     tech: ["Node.js", "OpenAI", "WebSocket"],
+    //     github: "https://github.com/yourusername/ai-chatbot",
+    //     demo: "",
+    // },
 ];
 
 const Projects = () => {
@@ -62,7 +83,7 @@ const Projects = () => {
                             <div className="project-image-container">
                                 {project.video ? (
                                     <VideoCarousel videos={project.video}></VideoCarousel>
-                                    ) : (
+                                ) : (
                                     <img src={project.image} alt={project.title} className="w-100 rounded shadow" />
                                 )}
                             </div>
@@ -87,7 +108,7 @@ const Projects = () => {
                                         href={project.github}
                                         target="_blank"
                                         className="d-flex justify-content-center align-items-center"
-                                        style={{cursor: 'none'}}
+                                        style={{ cursor: 'none' }}
                                     >
                                         <FaGithub className="me-2" /> Code
                                     </Button>
@@ -99,7 +120,7 @@ const Projects = () => {
                                         href={project.demo}
                                         target="_blank"
                                         className="d-flex justify-content-center align-items-center"
-                                        style={{cursor: 'none'}}
+                                        style={{ cursor: 'none' }}
                                     >
                                         <FaExternalLinkAlt className="me-1" /> Live
                                     </Button>
