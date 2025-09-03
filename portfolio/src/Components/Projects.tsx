@@ -12,11 +12,11 @@ const projects = [
     {
         title: "E-commerce Website for Food ordering and Delivery",
         description:
-            "Developed a full-featured e-commerce website with order, payment, review, and admin management.\nIntegrated Vertex AI chatbot for smart ordering (voice-based natural language order creation), and intelligent product search via voice & image recognition (TensorFlow).\nSupported multiple payment methods (COD, VNPAY, PayPal).\nImplemented AI-powered review filtering (toxic/NSFW detection) and sentiment analysis (positive, negative, neutral, mixed) for actionable insights in admin dashboard.",
-        video: ["https://c5untoriejse3yvf.public.blob.vercel-storage.com/ordering%20demo.mp4", "https://c5untoriejse3yvf.public.blob.vercel-storage.com/managing%20demo.mp4","https://c5untoriejse3yvf.public.blob.vercel-storage.com/reviewProduct.mp4"],
-        tech: ["React", "Typescript", "Golang", "PostgreSQL", "Docker", "Python", "Tensorflow", "Hugging face", "Natural Language Processing"],
+            "Developed a full-featured e-commerce website with order, payment, review, and admin management.\nIntegrated Vertex AI chatbot for smart ordering (voice-based natural language order creation), and intelligent product search via voice & image recognition (TensorFlow).\nSupported multiple payment methods (COD, VNPAY, PayPal).\nImplemented AI-powered review filtering (toxic/NSFW detection) and sentiment analysis (positive, negative, neutral, mixed) for actionable insights in admin dashboard.\nOptimized performance with Redis cache and goroutines for faster data fetching.",
+        video: ["https://c5untoriejse3yvf.public.blob.vercel-storage.com/ordering%20demo.mp4", "https://c5untoriejse3yvf.public.blob.vercel-storage.com/managing%20demo.mp4", "https://c5untoriejse3yvf.public.blob.vercel-storage.com/reviewProduct.mp4"],
+        tech: ["React", "Typescript", "Golang", "PostgreSQL", "Redis", "Docker", "Python", "Tensorflow", "Hugging face", "Natural Language Processing"],
         github: "",
-        demo: "https://github.com/yourusername/ecommerce",
+        demo: "https://github.com/dquang0504/GoodFood-FE",
     },
     {
         title: "Front-end for E-commerce Website GoodFood",
@@ -29,9 +29,9 @@ const projects = [
     {
         title: "Backend for E-commerce Website GoodFood",
         description:
-            "Implemented the backend system for GoodFood, handling core business logic, database management, and secure APIs for the e-commerce website. Built with Golang and PostgreSQL to ensure high performance and scalability. \nProvided RESTful APIs for product management, orders, payments, and user authentication (JWT, OAuth with Google/Facebook). \nIntegrated VNPAY and PayPal payment gateways. \nImplemented an image-recognition model powered by TensorFlow to enable intelligent product search from uploaded photos. \nDeployed using Docker for scalability and maintainability.",
+            "Implemented the backend system for GoodFood, handling core business logic, database management, and secure APIs. Built with Golang and PostgreSQL for high performance and scalability.\nIntegrated VNPAY and PayPal payment gateways.\nEnhanced speed with Redis cache for product pages, product details, and review analytics.\nDeployed using Docker for maintainability.",
         image: beCover,
-        tech: ["Golang", "PostgreSQL", "Fiber", "Resty", "Docker", "REST API", "JWT", "OAuth", "Websocket", "SQL Boiler", "TensorFlow"],
+        tech: ["Golang", "PostgreSQL", "Fiber", "Resty", "Docker", "REST API", "JWT", "OAuth", "Websocket", "SQL Boiler", "TensorFlow", "Redis"],
         github: "https://github.com/dquang0504/GoodFood-BE",
         demo: ""
     },
