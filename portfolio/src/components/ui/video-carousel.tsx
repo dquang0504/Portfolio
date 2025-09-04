@@ -7,23 +7,49 @@ const VideoCarousel = ({ videos }: { videos: string[] }) => {
     const next = () => setIndex((prev) => (prev + 1) % videos.length);
     const prev = () => setIndex((prev) => (prev - 1 + videos.length) % videos.length);
 
+    // Hàm check xem có phải link YouTube không
+    const isYouTube = (url: string) => url.includes("youtube.com/embed/");
+
     return (
         <div className="relative w-full overflow-hidden rounded-xl shadow-lg border border-yellow-500">
             <AnimatePresence mode="wait">
-                <motion.video
-                    key={index}
-                    src={videos[index]}
-                    controls={true}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="w-full rounded-xl"
-                    initial={{ opacity: 0, x: 50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -50 }}
-                    transition={{ duration: 0.5 }}
-                />
+                {isYouTube(videos[index]) ? (
+                    <motion.div
+                        key={index}
+                        initial={{ opacity: 0, x: 50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: -50 }}
+                        transition={{ duration: 0.5 }}
+                        className="w-full rounded-xl aspect-video"
+                    >
+                        <iframe
+                            width="100%"
+                            height="100%"
+                            src={videos[index]}
+                            title="YouTube video player"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerPolicy="strict-origin-when-cross-origin"
+                            allowFullScreen
+                            className="w-full h-full rounded-xl"
+                        ></iframe>
+                    </motion.div>
+                ) : (
+                    <motion.video
+                        key={index}
+                        src={videos[index]}
+                        controls
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full rounded-xl"
+                        initial={{ opacity: 0, x: 50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: -50 }}
+                        transition={{ duration: 0.5 }}
+                    />
+                )}
             </AnimatePresence>
 
             {/* Nút điều hướng */}
@@ -62,7 +88,7 @@ const VideoCarousel = ({ videos }: { videos: string[] }) => {
                         style={{
                             width: "16px",
                             height: "16px",
-                            backgroundColor: '#FFDD57'
+                            backgroundColor: "#FFDD57",
                         }}
                     />
                 ))}
